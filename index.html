@@ -30,6 +30,24 @@
 </head>
 
 <body>
+	
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+  <div class="modal-content" style="background-image: url('img/loading.gif');     background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    background-size: 350px;">
+ 
+    <span class="close" style="padding-left: 15px;">&times;</span>
+    <iframe id='ifr' frameborder="0" width="450" height="690"></iframe>
+
+  </div>
+
+</div>
+	
+	
   <!--==========================
   Header
   ============================-->
@@ -41,6 +59,8 @@
           <a href="https://twitter.com/krakin_t" class="twitter" target=”_blank” ><img src="img/icons/twitter.png" width="25px"></a>
           <a href="https://t.me/joinchat/UUATvVbwmm4EUut2259yGg" class="telegram" target=”_blank” ><img src="img/icons/telegram.png" width="25px"></a>
           <a href="https://www.instagram.com/krakin_t/" class="instagram" target=”_blank” ><img src="img/icons/instagram.png" width="25px"></a>
+		  <a href="https://github.com/krakintgithub" class="github" target=”_blank” ><img src="img/icons/github.png" width="25px"></a>
+
         </div>
       </div>
     </div>
@@ -48,9 +68,7 @@
     <div class="container">
 
       <div class="logo float-left">
-        <!-- Uncomment below if you prefer to use an image logo -->
         <h1 class="text-light"><a href="#intro" class="scrollto"><img src="img/logo_text.png" width="200px"></a></h1>
-        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
@@ -59,25 +77,7 @@
           <li><a href="#about">About Us</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#token-allocation">Token</a></li>
-          <!--<li><a href="#team">Team</a></li> -->
-          <!--<li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          -->
+		  <li><a href="#solo-miner">Miner</a></li>
           <li><a href="#footer">Contact Us</a></li>
         </ul>
       </nav><!-- .main-nav -->
@@ -93,10 +93,6 @@
       <div class="row justify-content-center align-self-center">
         <div class="col-md-6 intro-info order-md-first order-last">
           <h2>Decentralized Incubator<br>... for Your Ideas, Applications and Business!</h2>
-          <!--<div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          </div>
-        !-->
       </div>
         <div class="col-md-6 intro-img order-md-last order-first">
           <img src="img/intro-img.svg" alt="" class="img-fluid">
@@ -339,12 +335,21 @@
           </div>
         </div>
 
+
+     <section id="solo-miner" class="wow fadeIn"></section>
+
+
         <div class="row feature-item mt-5 pt-5">
           <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
             <img src="img/features-2.svg" class="img-fluid" alt="">
           </div>
 
+
+
+
           <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+			  
+			  
             <h4>Krakin't miner</h4>
             <p>
              Krakin't miner is a proof that time is money. With no mining hardware and zero electricity wasted, you can mine the Krakin't token and sell the earnings on exchanges.
@@ -353,6 +358,11 @@
               Token is distributed to miners by using the Proof of a Burn. The Proof of Burn is similar to staking, however, it provides clear market price by regulating the current supply and therefore a demand. 
               New tokens are created by demand only, while everyone benefits from everyone during the Proof of Burn process.
             </p>
+            
+            <!-- Trigger/Open The Modal -->
+			<p style="text-align:center"><button id="myBtn" style="border-radius: 10px; height: 35px;">Run Solo Miner</button></p>
+            
+            
             <p>
               We want you to join the mining of Krakin't by using our decentralized mining application (DApp). You can redeem your rewards for no mining fees associated with the mining pools, at any time. 
               There are no mining-blocks, no mining hardware, no electricity wasted, no pools, and no fees... there is you and the pure and simple Mathematics at your disposal. All you need is an Internet connection to mine and claim the rewards.
@@ -365,162 +375,8 @@
     </section><!-- #about -->
 
     <!--==========================
-      Portfolio Section
-  
-    <section id="portfolio" class="section-bg">
-      <div class="container">
-
-        <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
-        </header>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">App 1</a></h4>
-                <p>App</p>
-                <div>
-                  <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Web 3</a></h4>
-                <p>Web</p>
-                <div>
-                  <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">App 2</a></h4>
-                <p>App</p>
-                <div>
-                  <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Card 2</a></h4>
-                <p>Card</p>
-                <div>
-                  <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Web 2</a></h4>
-                <p>Web</p>
-                <div>
-                  <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">App 3</a></h4>
-                <p>App</p>
-                <div>
-                  <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Card 1</a></h4>
-                <p>Card</p>
-                <div>
-                  <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Card 3</a></h4>
-                <p>Card</p>
-                <div>
-                  <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4><a href="#">Web 1</a></h4>
-                <p>Web</p>
-                <div>
-                  <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> 
+ 
   ============================-->
-    <!--==========================
-      Clients Section
-    ============================-->
     <section id="testimonials">
       <div class="container">
 
@@ -579,98 +435,9 @@
     </section><!-- #testimonials -->
 
     <!--==========================
-      Team Section
-
-    <section id="team" class="section-bg">
-      <div class="container">
-        <div class="section-header">
-          <h3>Team</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp">
-            <div class="member">
-              <img src="img/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              <img src="img/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="member">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
+     
         ============================-->
 
-    <!--==========================
-      Clients Section
-    ============================-->
     <section id="clients" class="wow fadeInUp">
       <div class="container">
 
@@ -697,92 +464,7 @@
     <!--==========================
       Pricing Section
     ============================-->
-    <!--
-    <section id="pricing" class="wow fadeInUp section-bg">
-
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Pricing</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </header>
-
-        <div class="row flex-items-xs-middle flex-items-xs-center">
-      -->
-          <!-- Basic Plan  -->
-              <!--
-
-          <div class="col-xs-12 col-lg-4">
-            <div class="card">
-              <div class="card-header">
-                <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title"> 
-                  Basic Plan
-                </h4>
-                <ul class="list-group">
-                  <li class="list-group-item">Odio animi voluptates</li>
-                  <li class="list-group-item">Inventore quisquam et</li>
-                  <li class="list-group-item">Et perspiciatis suscipit</li>
-                  <li class="list-group-item">24/7 Support System</li>
-                </ul>
-                <a href="#" class="btn">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-      -->
-          <!-- Regular Plan  -->
-              <!--
-
-          <div class="col-xs-12 col-lg-4">
-            <div class="card">
-              <div class="card-header">
-                <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title"> 
-                  Regular Plan
-                </h4>
-                <ul class="list-group">
-                  <li class="list-group-item">Odio animi voluptates</li>
-                  <li class="list-group-item">Inventore quisquam et</li>
-                  <li class="list-group-item">Et perspiciatis suscipit</li>
-                  <li class="list-group-item">24/7 Support System</li>
-                </ul>
-                <a href="#" class="btn">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-      -->
-          <!-- Premium Plan  -->
-              <!--
-
-          <div class="col-xs-12 col-lg-4">
-            <div class="card">
-              <div class="card-header">
-                <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
-              </div>
-              <div class="card-block">
-                <h4 class="card-title"> 
-                  Premium Plan
-                </h4>
-                <ul class="list-group">
-                  <li class="list-group-item">Odio animi voluptates</li>
-                  <li class="list-group-item">Inventore quisquam et</li>
-                  <li class="list-group-item">Et perspiciatis suscipit</li>
-                  <li class="list-group-item">24/7 Support System</li>
-                </ul>
-                <a href="#" class="btn">Choose Plan</a>
-              </div>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-
-    </section>-->
-    <!-- #pricing -->
+ 
 
     <!--==========================
       Frequently Asked Questions Section
@@ -805,7 +487,10 @@
                 <a style="color:purple; font-size: 15px;" href="https://github.com/krakintgithub/main/blob/master/Krakint_Token_LightPaper.pdf" target=”_blank” >Click here to read our Token Light Paper.</a>
               </p>
 			  <p>
-                <a style="color:purple; font-size: 15px;" href="https://github.com/krakintgithub/main/blob/master/soon.pdf" target=”_blank” >Click here to read our Miner White Paper.</a>
+                <a style="color:purple; font-size: 15px;" href="https://github.com/krakintgithub/main/blob/master/soon.pdf" target=”_blank” >Click here to read our Miner Light Paper.</a>
+              </p>
+			  <p>
+                <a style="color:purple; font-size: 15px;" href="https://github.com/krakintgithub/main/blob/master/soon.pdf" target=”_blank” >Click here to read our Krakin't Labs Light Paper.</a>
               </p>
             </div>
           </li>
@@ -876,48 +561,9 @@
                     Please don't forget to include all necessary details so we can provide a better and a quicker support.</p>
                   </div>
 
-                  <!--<div class="footer-newsletter">
-                    <h4>Mailing list</h4>
-                    <p>Please subscribe if you would like to recieve e-mails regarding the important events and updates.</p>
-                    <form action="" method="post">
-                      <input type="email" name="email"><input type="submit"  value="Subscribe">
-                    </form>
-                  </div>
-                  !-->
 
                 </div>
 
-                <!--<div class="col-sm-6">
-                  <div class="footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About us</a></li>
-                      <li><a href="#">Features</a></li>
-                      <li><a href="#">Terms of service</a></li>
-                      <li><a href="#">Privacy policy</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="footer-links">
-                    <h4>Contact Us</h4>
-                    <p>
-                      A108 Adam Street <br>
-                      New York, NY 535022<br>
-                      United States <br>
-                      <strong>Phone:</strong> +1 5589 55488 55<br>
-                      <strong>Email:</strong> info@example.com<br>
-                    </p>
-                  </div>
-
-                  <div class="social-links">
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                  </div>
-                  </div>
-                  !-->
 
                 
 
@@ -928,36 +574,7 @@
           <div class="col-lg-6">
 <!-- www.123formbuilder.com script begins here --><iframe allowTransparency="true" style="min-height:500px; height:inherit; overflow:auto;" width="100%" id="contactform123" name="contactform123" marginwidth="0" marginheight="0" frameborder="0" src="https://www.123formbuilder.com/my-contact-form-5663706.html"><p>Your browser does not support iframes. The contact form cannot be displayed. Please use another contact method (phone, fax etc)</p></iframe><!-- www.123formbuilder.com script ends here -->
 
-            <!--<div class="form">
-              <h4>Send us a message</h4>
-              <p>Please fill-out the form below, or contact us via the social channels. You may also send a direct email to info@krakint.com</p>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
 
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
-              </form>
-            </div>
-
-          </div>
--->
           
 
         </div>
@@ -996,6 +613,37 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  
+<script>
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+document.getElementById('ifr').src += 'https://krakint-miner.onrender.com/#popup';
+modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+modal.style.display = "none";
+}
+}
+
+</script>	  
 
 </body>
 </html>
