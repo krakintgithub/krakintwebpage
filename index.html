@@ -31,8 +31,8 @@
 
 <body>
 	
-<!-- The Modal -->
-<div id="myModal" class="modal">
+<!-- The Modals -->
+<div id="minerModal" class="modal">
 
 <!-- Modal content -->
   <div class="modal-content" style="background-image: url('img/loading.gif');     background-repeat: no-repeat;
@@ -40,8 +40,24 @@
     position: relative;
     background-size: 350px;">
  
-    <span class="close" style="padding-left: 15px;">&times;</span>
-    <iframe id='ifr' frameborder="0" width="450" height="690"></iframe>
+    <span class="closeMiner" style="padding-left: 15px;">&times;</span>
+    <iframe id='ifrMiner' frameborder="0" width="450" height="400" scrolling="no" style="background: #1D4BA7"></iframe>
+
+  </div>
+
+</div>
+
+<!-- The Modals -->
+<div id="saleModal" class="modal">
+
+<!-- Modal content -->
+  <div class="modal-content" style="background-image: url('img/loading.gif');     background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+    background-size: 350px;">
+ 
+    <span class="closeSale" style="padding-left: 15px;">&times;</span>
+    <iframe id='ifrSale' frameborder="0" width="450" height="420" scrolling="no" style="background: #1D4BA7"></iframe>
 
   </div>
 
@@ -265,35 +281,16 @@
 		        <div class="container">
 					
 		<header class="section-header">
-          <h3>Token Allocation</h3>
+          <h3>Purchase Token</h3>
         </header>
 					
-					
-        <div class="row counters">
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">10</span> Million
-            <p>Solo-Miner</p>
-          </div>
-
-		  <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">5</span> Million
-            <p>Burning and Rewards</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">5</span> Million
-            <p>Exchanges and Liquidity</p>
-          </div>
-          
-
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1</span> Million
-            <p>Krakin't team</p>
-          </div>
-          
-        </div>
-      </div>
+		<p class="cta-text">You can purchase tokens, <b>right now</b> with Ethereum, using our decentralized application by pressing the Purchase Token button below:</p>
+		<p class="cta-text">
+		<!-- Trigger/Open The Modal -->
+		<p style="text-align:center"><button id="saleBtn" style="border-radius: 10px; height: 35px;">Purchase Token</button></p>
+		</p>
+        
+           </div>
 		  </div>
 		  </section>
     
@@ -303,9 +300,10 @@
     <section id="call-to-action" class="wow fadeInUp">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
+		    <div class="col-lg-9 text-center text-lg-left">
             <h3 class="cta-title">Token Specifications</h3>
             <p class="cta-text">As a mutable token, there are 3 main contracts that make this token possible (Token, Router and Core). However, the main and the immutable part (Token) will always be the Ethereum address: 0x7C131Ab459b874b82f19cdc1254fB66840D021B6. <br>Token Symbol is KRK. </p>
+            <p class="cta-text">Current total supply is 21 million, while the miner determines a current supply.</p>
             <p class="cta-text">To find out the active contracts linked to the main Token component, you will need to execute the view functions of a Token contract. Any other contracts and on any other chains are documented in our Technology section.</p>
           </div>
  
@@ -360,7 +358,7 @@
             </p>
             
             <!-- Trigger/Open The Modal -->
-			<p style="text-align:center"><button id="myBtn" style="border-radius: 10px; height: 35px;">Run Solo Miner</button></p>
+			<p style="text-align:center"><button id="minerBtn" style="border-radius: 10px; height: 35px;">Run Solo Miner</button></p>
             
             
             <p>
@@ -617,29 +615,51 @@
 <script>
 
 // Get the modal
-var modal = document.getElementById("myModal");
+var minerModal = document.getElementById("minerModal");
+var saleModal = document.getElementById("saleModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var minerBtn = document.getElementById("minerBtn");
+var saleBtn = document.getElementById("saleBtn");
+
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var spanMiner = document.getElementsByClassName("closeMiner")[0];
+var spanSale = document.getElementsByClassName("closeSale")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-document.getElementById('ifr').src += 'https://krakint-miner.onrender.com';
-modal.style.display = "block";
+minerBtn.onclick = function() {
+document.getElementById('ifrMiner').src += 'https://krakint-miner.onrender.com';
+minerModal.style.display = "block";
+}
+
+// When the user clicks on the button, open the modal
+saleBtn.onclick = function() {
+document.getElementById('ifrSale').src += 'https://krakint-sale.onrender.com';
+saleModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-modal.style.display = "none";
+spanMiner.onclick = function() {
+minerModal.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+spanSale.onclick = function() {
+saleModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = "none";
+if (event.target == minerModal) {
+minerModal.style.display = "none";
+}
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == saleModal) {
+saleModal.style.display = "none";
 }
 }
 

@@ -1658,15 +1658,23 @@ width: 452px;
 }
 
 /* The Close Button */
-.close {
+.closeMiner, .closeSale {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.closeMiner:hover,
+.closeMiner:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeSale:hover,
+.closeSale:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
